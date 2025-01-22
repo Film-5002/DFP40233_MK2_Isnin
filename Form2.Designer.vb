@@ -22,7 +22,7 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label1 = New Label()
+        lblTajuk = New Label()
         lblNama = New Label()
         lblNotel = New Label()
         lblAlamat = New Label()
@@ -42,9 +42,9 @@ Partial Class Form2
         ckbKopi = New CheckBox()
         ckbMilo = New CheckBox()
         dgvJadual = New DataGridView()
-        Column1 = New DataGridViewTextBoxColumn()
-        Column2 = New DataGridViewTextBoxColumn()
-        Column3 = New DataGridViewTextBoxColumn()
+        clnBil = New DataGridViewTextBoxColumn()
+        clnNama = New DataGridViewTextBoxColumn()
+        clnNotel = New DataGridViewTextBoxColumn()
         BtnDelete = New Button()
         BtnUpdate = New Button()
         BtnRead = New Button()
@@ -52,19 +52,19 @@ Partial Class Form2
         rdbCashless = New RadioButton()
         rdbCash = New RadioButton()
         lblTarikh = New Label()
-        cbbTarikh = New ComboBox()
+        DateTimePicker1 = New DateTimePicker()
         CType(dgvJadual, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' Label1
+        ' lblTajuk
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 13.875F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(14, 30)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(402, 50)
-        Label1.TabIndex = 0
-        Label1.Text = "Maklumat Pelanggan "
+        lblTajuk.AutoSize = True
+        lblTajuk.Font = New Font("Segoe UI", 13.875F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTajuk.Location = New Point(14, 30)
+        lblTajuk.Name = "lblTajuk"
+        lblTajuk.Size = New Size(402, 50)
+        lblTajuk.TabIndex = 0
+        lblTajuk.Text = "Maklumat Pelanggan "
         ' 
         ' lblNama
         ' 
@@ -233,33 +233,33 @@ Partial Class Form2
         ' dgvJadual
         ' 
         dgvJadual.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvJadual.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3})
+        dgvJadual.Columns.AddRange(New DataGridViewColumn() {clnBil, clnNama, clnNotel})
         dgvJadual.Location = New Point(11, 438)
         dgvJadual.Name = "dgvJadual"
         dgvJadual.RowHeadersWidth = 82
         dgvJadual.Size = New Size(758, 300)
         dgvJadual.TabIndex = 20
         ' 
-        ' Column1
+        ' clnBil
         ' 
-        Column1.HeaderText = "Bilangan"
-        Column1.MinimumWidth = 10
-        Column1.Name = "Column1"
-        Column1.Width = 200
+        clnBil.HeaderText = "Bilangan"
+        clnBil.MinimumWidth = 10
+        clnBil.Name = "clnBil"
+        clnBil.Width = 200
         ' 
-        ' Column2
+        ' clnNama
         ' 
-        Column2.HeaderText = "Nama"
-        Column2.MinimumWidth = 10
-        Column2.Name = "Column2"
-        Column2.Width = 200
+        clnNama.HeaderText = "Nama"
+        clnNama.MinimumWidth = 10
+        clnNama.Name = "clnNama"
+        clnNama.Width = 200
         ' 
-        ' Column3
+        ' clnNotel
         ' 
-        Column3.HeaderText = "No.tel"
-        Column3.MinimumWidth = 10
-        Column3.Name = "Column3"
-        Column3.Width = 200
+        clnNotel.HeaderText = "No.tel"
+        clnNotel.MinimumWidth = 10
+        clnNotel.Name = "clnNotel"
+        clnNotel.Width = 200
         ' 
         ' BtnDelete
         ' 
@@ -328,20 +328,19 @@ Partial Class Form2
         lblTarikh.TabIndex = 27
         lblTarikh.Text = "Tarikh : "
         ' 
-        ' cbbTarikh
+        ' DateTimePicker1
         ' 
-        cbbTarikh.FormattingEnabled = True
-        cbbTarikh.Location = New Point(863, 134)
-        cbbTarikh.Name = "cbbTarikh"
-        cbbTarikh.Size = New Size(242, 40)
-        cbbTarikh.TabIndex = 28
+        DateTimePicker1.Location = New Point(849, 134)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(400, 39)
+        DateTimePicker1.TabIndex = 29
         ' 
         ' Form2
         ' 
         AutoScaleDimensions = New SizeF(13F, 32F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1645, 883)
-        Controls.Add(cbbTarikh)
+        Controls.Add(DateTimePicker1)
         Controls.Add(lblTarikh)
         Controls.Add(rdbCash)
         Controls.Add(rdbCashless)
@@ -368,7 +367,7 @@ Partial Class Form2
         Controls.Add(lblAlamat)
         Controls.Add(lblNotel)
         Controls.Add(lblNama)
-        Controls.Add(Label1)
+        Controls.Add(lblTajuk)
         Name = "Form2"
         Text = "Form2"
         CType(dgvJadual, ComponentModel.ISupportInitialize).EndInit()
@@ -376,7 +375,7 @@ Partial Class Form2
         PerformLayout()
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblTajuk As Label
     Friend WithEvents lblNama As Label
     Friend WithEvents lblNotel As Label
     Friend WithEvents lblAlamat As Label
@@ -396,9 +395,9 @@ Partial Class Form2
     Friend WithEvents ckbKopi As CheckBox
     Friend WithEvents ckbMilo As CheckBox
     Friend WithEvents dgvJadual As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents clnBil As DataGridViewTextBoxColumn
+    Friend WithEvents clnNama As DataGridViewTextBoxColumn
+    Friend WithEvents clnNotel As DataGridViewTextBoxColumn
     Friend WithEvents BtnDelete As Button
     Friend WithEvents BtnUpdate As Button
     Friend WithEvents BtnRead As Button
@@ -406,5 +405,5 @@ Partial Class Form2
     Friend WithEvents rdbCashless As RadioButton
     Friend WithEvents rdbCash As RadioButton
     Friend WithEvents lblTarikh As Label
-    Friend WithEvents cbbTarikh As ComboBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
