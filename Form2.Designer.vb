@@ -52,7 +52,7 @@ Partial Class Form2
         rdbCashless = New RadioButton()
         rdbCash = New RadioButton()
         lblTarikh = New Label()
-        DateTimePicker1 = New DateTimePicker()
+        dtpTarikh = New DateTimePicker()
         CType(dgvJadual, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -328,19 +328,19 @@ Partial Class Form2
         lblTarikh.TabIndex = 27
         lblTarikh.Text = "Tarikh : "
         ' 
-        ' DateTimePicker1
+        ' dtpTarikh
         ' 
-        DateTimePicker1.Location = New Point(849, 134)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(400, 39)
-        DateTimePicker1.TabIndex = 29
+        dtpTarikh.Location = New Point(849, 134)
+        dtpTarikh.Name = "dtpTarikh"
+        dtpTarikh.Size = New Size(400, 39)
+        dtpTarikh.TabIndex = 29
         ' 
         ' Form2
         ' 
         AutoScaleDimensions = New SizeF(13F, 32F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1645, 883)
-        Controls.Add(DateTimePicker1)
+        Controls.Add(dtpTarikh)
         Controls.Add(lblTarikh)
         Controls.Add(rdbCash)
         Controls.Add(rdbCashless)
@@ -405,5 +405,5 @@ Partial Class Form2
     Friend WithEvents rdbCashless As RadioButton
     Friend WithEvents rdbCash As RadioButton
     Friend WithEvents lblTarikh As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpTarikh As DateTimePicker
 End Class
